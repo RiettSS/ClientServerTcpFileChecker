@@ -1,0 +1,49 @@
+﻿using Server.Commands;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Server
+{
+    public class Server
+    {
+        public static bool Working = true;
+
+        public static void Start(string ipAddress, string port)
+        {
+            string ip = ipAddress;
+            int pport;
+            int.TryParse(port, out pport);
+            var tcpEndPoint = new IPEndPoint(IPAddress.Parse(ip), pport);
+
+            var tcpSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            tcpSocket.Bind(tcpEndPoint);
+            tcpSocket.Listen(5);
+
+            while (true)
+            {
+                var listener = tcpSocket.Accept();
+                byte[] data = new byte[5000];
+                listener.Receive(data);
+                
+                var dataStructure = Converter.ToData(data);
+
+                var response = dataStructure.Command.Perform();
+
+                dataStructure.Response = response;
+
+                var arr = Converter.ToByteArray(dataStructure);
+
+                listener.Send(arr);
+
+                listener.Shutdown(SocketShutdown.Both);
+                listener.Close();
+            }
+        }
+    }
+}
