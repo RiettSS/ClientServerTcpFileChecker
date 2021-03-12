@@ -8,3 +8,13 @@ C:\Users\Riett\source\repos\ClientServerFileChecker\Server\obj\Debug\Server.cspr
 C:\Users\Riett\source\repos\ClientServerFileChecker\Server\obj\Debug\Server.exe
 C:\Users\Riett\source\repos\ClientServerFileChecker\Server\obj\Debug\Server.pdb
 C:\Users\Riett\source\repos\ClientServerFileChecker\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\bin\Debug\Server.exe.config
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\bin\Debug\Server.exe
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\bin\Debug\Server.pdb
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.exe
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.pdb

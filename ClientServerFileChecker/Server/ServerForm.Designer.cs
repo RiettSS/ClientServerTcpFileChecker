@@ -38,35 +38,39 @@
             // 
             // ServerConsole
             // 
-            this.ServerConsole.Location = new System.Drawing.Point(12, 36);
+            this.ServerConsole.Location = new System.Drawing.Point(16, 44);
+            this.ServerConsole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ServerConsole.Multiline = true;
             this.ServerConsole.Name = "ServerConsole";
             this.ServerConsole.ReadOnly = true;
             this.ServerConsole.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.ServerConsole.Size = new System.Drawing.Size(776, 402);
+            this.ServerConsole.Size = new System.Drawing.Size(1033, 494);
             this.ServerConsole.TabIndex = 0;
             // 
             // ipLabel
             // 
             this.ipLabel.AutoSize = true;
-            this.ipLabel.Location = new System.Drawing.Point(13, 13);
+            this.ipLabel.Location = new System.Drawing.Point(17, 16);
+            this.ipLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ipLabel.Name = "ipLabel";
-            this.ipLabel.Size = new System.Drawing.Size(15, 13);
+            this.ipLabel.Size = new System.Drawing.Size(19, 17);
             this.ipLabel.TabIndex = 1;
             this.ipLabel.Text = "ip";
             // 
             // ipInputField
             // 
-            this.ipInputField.Location = new System.Drawing.Point(35, 10);
+            this.ipInputField.Location = new System.Drawing.Point(47, 12);
+            this.ipInputField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ipInputField.Name = "ipInputField";
-            this.ipInputField.Size = new System.Drawing.Size(130, 20);
+            this.ipInputField.Size = new System.Drawing.Size(172, 22);
             this.ipInputField.TabIndex = 2;
             // 
             // StartServerButton
             // 
-            this.StartServerButton.Location = new System.Drawing.Point(259, 10);
+            this.StartServerButton.Location = new System.Drawing.Point(345, 12);
+            this.StartServerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StartServerButton.Name = "StartServerButton";
-            this.StartServerButton.Size = new System.Drawing.Size(82, 20);
+            this.StartServerButton.Size = new System.Drawing.Size(109, 25);
             this.StartServerButton.TabIndex = 3;
             this.StartServerButton.Text = "Start";
             this.StartServerButton.UseVisualStyleBackColor = true;
@@ -75,30 +79,33 @@
             // portLabel
             // 
             this.portLabel.AutoSize = true;
-            this.portLabel.Location = new System.Drawing.Point(171, 13);
+            this.portLabel.Location = new System.Drawing.Point(228, 16);
+            this.portLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.portLabel.Name = "portLabel";
-            this.portLabel.Size = new System.Drawing.Size(25, 13);
+            this.portLabel.Size = new System.Drawing.Size(33, 17);
             this.portLabel.TabIndex = 4;
             this.portLabel.Text = "port";
             // 
             // portInputField
             // 
-            this.portInputField.Location = new System.Drawing.Point(202, 10);
+            this.portInputField.Location = new System.Drawing.Point(269, 12);
+            this.portInputField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.portInputField.Name = "portInputField";
-            this.portInputField.Size = new System.Drawing.Size(51, 20);
+            this.portInputField.Size = new System.Drawing.Size(67, 22);
             this.portInputField.TabIndex = 5;
             // 
             // ServerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.portInputField);
             this.Controls.Add(this.portLabel);
             this.Controls.Add(this.StartServerButton);
             this.Controls.Add(this.ipInputField);
             this.Controls.Add(this.ipLabel);
             this.Controls.Add(this.ServerConsole);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ServerForm";
             this.Text = "Server";
             this.ResumeLayout(false);

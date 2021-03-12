@@ -26,11 +26,34 @@ namespace Client
         {
             var arr = Converter.ToByteArray(data);
             byte[] receivedArr = new byte[10000];
+            try
+            {
+                tcpSocket.Send(arr);
+            } catch(Exception e)
+            {
+                ConsoleOut.WriteLine("arraySending");
+                ConsoleOut.WriteLine(e.Message);
+            }
 
-            tcpSocket.Send(arr);
-            tcpSocket.Receive(receivedArr);
+            try
+            {
+                tcpSocket.Receive(receivedArr);
+            } catch(Exception e)
+            {
+                ConsoleOut.WriteLine("arrayReceiving");
+                ConsoleOut.WriteLine(e.Message);
+            }
 
-            var receivedData = Converter.ToData(receivedArr);
+            Data receivedData;
+            try
+            {
+                receivedData = Converter.ToData(receivedArr);
+            } catch(Exception e)
+            {
+                ConsoleOut.WriteLine("arrayConverting");
+                ConsoleOut.WriteLine(e.Message);
+                receivedData = new Data();
+            }
 
             return receivedData;
         }

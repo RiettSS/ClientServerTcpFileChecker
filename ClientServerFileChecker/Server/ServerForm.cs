@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -20,11 +21,13 @@ namespace Server
             InitializeComponent();
 
             serverConsole = ServerConsole;
+
+            FormClosing += Exit;
         }
 
         private void StartServerButton_Click(object sender, EventArgs e)
         {
-            ConsoleOut.WriteLine(serverConsole, "Server started...");
+            ConsoleOut.WriteLine("Server started...");
             StartServerButton.Enabled = false;
             portInputField.ReadOnly = true;
             ipInputField.ReadOnly = true;
@@ -34,6 +37,11 @@ namespace Server
 
             Thread serverThread = new Thread(() => { Server.Start(ip, port); });
             serverThread.Start();
+        }
+
+        private void Exit(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
         }
     }
 }

@@ -9,23 +9,23 @@ namespace Server
 {
     public static class ConsoleOut
     {
-        public static void WriteLine(TextBox serverConsole, string text)
+        public static void WriteLine(string text)
         {
-            string temp = serverConsole.Text;
+            string temp = ServerForm.serverConsole.Text;
             StringBuilder strBuilder = new StringBuilder();
             strBuilder.Append(temp);
             strBuilder.Append(text);
             strBuilder.Append(Environment.NewLine);
-            serverConsole.Text = strBuilder.ToString();
+            ServerForm.serverConsole.Text = strBuilder.ToString();
         }
 
-        public static void WriteLine(TextBox serverConsole)
+        public static void WriteLine()
         {
-            string temp = serverConsole.Text;
+            string temp = ServerForm.serverConsole.Text;
             StringBuilder strBuilder = new StringBuilder();
             strBuilder.Append(temp);
             strBuilder.Append(Environment.NewLine);
-            serverConsole.Text = strBuilder.ToString();
+            ServerForm.serverConsole.Text = strBuilder.ToString();
         }
 
         public static void Write(TextBox serverConsole, string text)
@@ -35,6 +35,11 @@ namespace Server
             strBuilder.Append(temp);
             strBuilder.Append(text);
             serverConsole.Text = strBuilder.ToString();
+        }
+
+        public static void Clear(TextBox box)
+        {
+            box.Text = "";
         }
     }
 }

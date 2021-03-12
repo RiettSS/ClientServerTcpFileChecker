@@ -29,17 +29,34 @@ namespace Server
             {
                 var listener = tcpSocket.Accept();
                 byte[] data = new byte[5000];
-                listener.Receive(data);
+                try
+                {
+                    listener.Receive(data);
+
+                   
+
+                } catch (Exception e)
+                {
+                    ConsoleOut.WriteLine("dataReceiving:");
+                    ConsoleOut.WriteLine(e.Message);
+                }
                 
                 var dataStructure = Converter.ToData(data);
 
-                var response = dataStructure.Command.Perform();
+                try
+                {
+                    var response = dataStructure.Command.Perform();
 
-                dataStructure.Response = response;
+                    dataStructure.Response = response;
 
-                var arr = Converter.ToByteArray(dataStructure);
+                    var arr = Converter.ToByteArray(dataStructure);
 
-                listener.Send(arr);
+                    listener.Send(arr);
+                }
+                catch(Exception e)
+                {
+                    ConsoleOut.WriteLine(e.Message);
+                }
 
                 listener.Shutdown(SocketShutdown.Both);
                 listener.Close();
