@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Client;
 
-namespace Server
+namespace Client
 {
-    [Serializable]
-    public struct Data
+    public enum CommandType
     {
-        public CommandType Command;
+        SayHello,
+
     }
 }

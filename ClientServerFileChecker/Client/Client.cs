@@ -22,7 +22,7 @@ namespace Client
             return tcpSocket;
         }
 
-        public static Data Send(this Socket tcpSocket, Data data)
+        public static void Send(this Socket tcpSocket, Data data)
         {
             var arr = Converter.ToByteArray(data);
             byte[] receivedArr = new byte[10000];
@@ -34,28 +34,6 @@ namespace Client
                 ConsoleOut.WriteLine("arraySending");
                 ConsoleOut.WriteLine(e.Message);
             }
-
-            try
-            {
-                tcpSocket.Receive(receivedArr);
-            } catch(Exception e)
-            {
-                ConsoleOut.WriteLine("arrayReceiving");
-                ConsoleOut.WriteLine(e.Message);
-            }
-
-            Data receivedData;
-            try
-            {
-                receivedData = Converter.ToData(receivedArr);
-            } catch(Exception e)
-            {
-                ConsoleOut.WriteLine("arrayConverting");
-                ConsoleOut.WriteLine(e.Message);
-                receivedData = new Data();
-            }
-
-            return receivedData;
         }
 
         public static void CloseConnection(Socket socket)

@@ -10,9 +10,9 @@ using Client;
 
 namespace Server
 {
-    public static class Converter
+    public static class Converter<T>
     {
-        public static byte[] ToByteArray(Data command) 
+        public static byte[] ToByteArray(T command) 
         {
             var formatter = new BinaryFormatter();
             byte[] bytes;
@@ -26,18 +26,19 @@ namespace Server
             return bytes;            
         }
 
-        public static Data ToData(byte[] bytes)
+        
+        public static T ToData(byte[] bytes)
         {
             var formatter = new BinaryFormatter();
             formatter.Binder = new CustomBinder();
-            Data command;
+            T command;
 
             using (var stream = new MemoryStream())
             {
                 var bw = new BinaryWriter(stream);
                 bw.Write(bytes);
                 stream.Position = 0;
-                command = (Data)formatter.Deserialize(stream);
+                command = (T)formatter.Deserialize(stream);
             }
 
             return command;

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Client;
 
 namespace Server
 {
     [Serializable]
     public struct Data
     {
-        public ICommand Command;
-        public IResponse Response;
+        public CommandType Command;
     }
 }

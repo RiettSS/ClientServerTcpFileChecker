@@ -39,12 +39,13 @@ namespace Client
             portInputField.ReadOnly = true;
             int.TryParse(portInputField.Text, out var port);
             socket = Client.Connect(ipInputField.Text, port);
-            var command = new MessagePrinter();
             var data = new Data();
-            data.Command = command;
-            var receivedData = Client.Send(socket, data);
-            var a = (MessagePrinterResponse)receivedData.Response;
-            //ipInputField.Text = a.responseMessage;
+            data.Command = CommandType.SayHello;
+            Client.Send(socket, data);
+            byte[] bytes = new byte[10000];
+            socket.Receive(bytes);
+            var response = Converter<string>.ToData(bytes);
+            ConsoleOut.WriteLine(response);
         }
 
         private void findButton_Click(object sender, EventArgs e)
