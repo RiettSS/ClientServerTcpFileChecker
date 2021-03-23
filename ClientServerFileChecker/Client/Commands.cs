@@ -9,6 +9,7 @@ namespace Client
     public enum CommandType
     {
         SayHello,
+        GetDirectory
 
     }
 }

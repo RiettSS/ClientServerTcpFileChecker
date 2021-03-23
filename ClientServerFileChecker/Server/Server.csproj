@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandProcessor.cs" />
+    <Compile Include="Commands.cs" />
     <Compile Include="Commands\DirectoryGetter.cs" />
     <Compile Include="Commands\Downloader.cs" />
     <Compile Include="Commands\FileDownloader.cs" />

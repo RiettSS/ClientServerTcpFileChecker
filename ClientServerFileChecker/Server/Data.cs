@@ -11,5 +11,6 @@ namespace Server
     public struct Data
     {
         public CommandType Command;
+        public string[] Arguments;
     }
 }

@@ -44,69 +44,33 @@ namespace Client
             Client.Send(socket, data);
             byte[] bytes = new byte[10000];
             socket.Receive(bytes);
-            var response = Converter<string>.ToData(bytes);
+            var response = Encoding.UTF8.GetString(bytes);
             ConsoleOut.WriteLine(response);
         }
 
         private void findButton_Click(object sender, EventArgs e)
         {
-            int.TryParse(portInputField.Text, out var port);
-            socket = Client.Connect(ipInputField.Text, port);
+            var path = pathInputField.Text.Trim();
             var data = new Data();
-            var command = new DirectoryGetter();
-            command.Path = pathInputField.Text;
-            data.Command = command;
-            var responseData = Client.Send(socket, data);
+            data.Command = CommandType.GetDirectory;
+            data.Arguments = new string[1];
+            data.Arguments[0] = path;
+            Client.Send(socket, data);
+            byte[] bytes = new byte[10000];
+            socket.Receive(bytes);
 
-            var response = (DirectoryGetterResponse)responseData.Response;
-
-            ConsoleOut.Clear(directoryOutputField);
-            try
-            {
-                ConsoleOut.WriteLine(response.Response);
-            } 
-            catch
-            {
-                ConsoleOut.WriteLine("Wrong path.");
-            }
+            var response = Encoding.UTF8.GetString(bytes);
+            ConsoleOut.Write(directoryOutputField, response);
         }
 
         private void downloadButton_Click(object sender, EventArgs e)
         {
-            var path = downloadInputField.Text;
-            var saveTo = saveToClientInput.Text;
-
-            var downloader = new FileDownloader();
-            downloader.Path = path;
-            var data = new Data();
-            data.Command = downloader;
-            var responseData = Client.Send(socket, data);
-            var response = (FileDownloaderResponse)responseData.Response;
-            ConsoleOut.WriteLine("byte array:");
-            foreach(var line in response.fileByteArray)
-            {
-                ConsoleOut.WriteLine("byte array element:");
-                ConsoleOut.WriteLine(line.ToString());
-            }
-
-            File.WriteAllBytes(saveTo, response.fileByteArray);
+            
         }
 
         private void testButton_Click(object sender, EventArgs e)
         {
-            var data = new Data();
-            var downloader = new Downloader();
-            downloader.Path = "smth";
-            data.Command = downloader;
-            var responseData = Client.Send(socket, data);
-            var response = responseData.Response;
-            var r = (DownloaderResponse)response;
-
-            foreach (var line in r.bytes)
-            {
-                ConsoleOut.WriteLine("byte array element:");
-                ConsoleOut.WriteLine(line.ToString());
-            }
+            
 
         }
     }

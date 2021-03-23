@@ -53,6 +53,7 @@
     <Compile Include="ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Commands.cs" />
     <Compile Include="Commands\DirectoryGetter.cs" />
     <Compile Include="Commands\Downloader.cs" />
     <Compile Include="Commands\FileDownloader.cs" />

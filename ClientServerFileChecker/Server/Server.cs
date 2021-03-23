@@ -12,7 +12,8 @@ namespace Server
 {
     public class Server
     {
-        public static bool Working = true;
+        //public static bool Working = true;
+        public static Socket Listener;
 
         public static void Start(string ipAddress, string port)
         {
@@ -28,30 +29,25 @@ namespace Server
             while (true)
             {
                 var listener = tcpSocket.Accept();
+                Listener = listener;
                 byte[] data = new byte[5000];
+
                 try
                 {
                     listener.Receive(data);
 
-                   
-
-                } catch (Exception e)
+                }
+                catch (Exception e)
                 {
                     ConsoleOut.WriteLine("dataReceiving:");
                     ConsoleOut.WriteLine(e.Message);
                 }
                 
-                var dataStructure = Converter.ToData(data);
+                var dataStructure = Converter<Data>.ToData(data);
 
                 try
                 {
-                    var response = dataStructure.Command.Perform();
-
-                    dataStructure.Response = response;
-
-                    var arr = Converter.ToByteArray(dataStructure);
-
-                    listener.Send(arr);
+                    CommandProcessor.Process(dataStructure);
                 }
                 catch(Exception e)
                 {

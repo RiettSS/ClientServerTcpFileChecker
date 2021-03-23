@@ -24,7 +24,7 @@ namespace Client
 
         public static void Send(this Socket tcpSocket, Data data)
         {
-            var arr = Converter.ToByteArray(data);
+            var arr = Converter<Data>.ToByteArray(data);
             byte[] receivedArr = new byte[10000];
             try
             {
