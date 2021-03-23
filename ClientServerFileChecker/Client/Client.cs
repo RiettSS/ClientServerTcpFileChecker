@@ -36,6 +36,22 @@ namespace Client
             }
         }
 
+        public static byte[] AcceptBytes(this Socket tcpSocket)
+        {
+            var bytes = new byte[10000];
+
+            try
+            {
+                tcpSocket.Receive(bytes);
+            }
+            catch(Exception e)
+            {
+                ConsoleOut.WriteLine(e.Message);
+            }
+
+            return bytes;
+        }
+
         public static void CloseConnection(Socket socket)
         {
             socket.Shutdown(SocketShutdown.Both);

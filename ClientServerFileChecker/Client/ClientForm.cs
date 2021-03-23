@@ -55,12 +55,13 @@ namespace Client
             data.Command = CommandType.GetDirectory;
             data.Arguments = new string[1];
             data.Arguments[0] = path;
+            int.TryParse(portInputField.Text, out var port);
+            socket = Client.Connect(ipInputField.Text, port);
             Client.Send(socket, data);
-            byte[] bytes = new byte[10000];
-            socket.Receive(bytes);
-
+            var bytes = socket.AcceptBytes();
             var response = Encoding.UTF8.GetString(bytes);
-            ConsoleOut.Write(directoryOutputField, response);
+            ConsoleOut.Clear(dirOut);
+            ConsoleOut.WriteLine(response);
         }
 
         private void downloadButton_Click(object sender, EventArgs e)

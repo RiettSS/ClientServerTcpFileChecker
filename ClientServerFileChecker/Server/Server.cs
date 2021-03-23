@@ -21,13 +21,12 @@ namespace Server
             int pport;
             int.TryParse(port, out pport);
             var tcpEndPoint = new IPEndPoint(IPAddress.Parse(ip), pport);
-
             var tcpSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             tcpSocket.Bind(tcpEndPoint);
             tcpSocket.Listen(5);
-
             while (true)
             {
+                
                 var listener = tcpSocket.Accept();
                 Listener = listener;
                 byte[] data = new byte[5000];
@@ -47,7 +46,7 @@ namespace Server
 
                 try
                 {
-                    CommandProcessor.Process(dataStructure);
+                    CommandProcessor.Process(listener, dataStructure);
                 }
                 catch(Exception e)
                 {

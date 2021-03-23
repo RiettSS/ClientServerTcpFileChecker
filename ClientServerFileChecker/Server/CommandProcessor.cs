@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using Client;
@@ -10,8 +11,10 @@ namespace Server
 {
     public static class CommandProcessor
     {
-        public static void Process(Data data)
+        public static void Process(Socket listener ,Data data)
         {
+            ConsoleOut.WriteLine("Command is processing...");
+
             switch (data.Command)
             {
                 case CommandType.SayHello:
@@ -26,10 +29,11 @@ namespace Server
                         {
                             ConsoleOut.WriteLine(e.Message);
                         }
-                        break;
                     }
+                    break;
                 case CommandType.GetDirectory:
                     {
+                        ConsoleOut.WriteLine("Getting directory...");
                         var directories = Directory.GetDirectories(data.Arguments[0]);
                         var files = Directory.GetFiles(data.Arguments[0]);
 
@@ -43,12 +47,14 @@ namespace Server
                         }
 
                         var response = builder.ToString();
+                        ConsoleOut.WriteLine(response);
 
                         var arr = Encoding.UTF8.GetBytes(response);
-                        Server.Listener.Send(arr);
+                        //var arr = Encoding.UTF8.GetBytes("Connected");
 
-                        break;
+                        listener.Send(arr);
                     }
+                    break;
             }
         }
     }
