@@ -55,6 +55,16 @@ namespace Server
                         listener.Send(arr);
                     }
                     break;
+                case CommandType.DownloadFile:
+                    {
+                        ConsoleOut.WriteLine("Sending file " + data.Arguments[0]);
+                        var path = data.Arguments[0];
+                        var bytes = File.ReadAllBytes(path);
+
+                        listener.Send(bytes);
+
+                    }
+                    break;
             }
         }
     }

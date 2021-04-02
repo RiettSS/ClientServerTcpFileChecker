@@ -66,11 +66,40 @@ namespace Client
 
         private void downloadButton_Click(object sender, EventArgs e)
         {
-            
+            var path = downloadInputField.Text;
+            var pathTo = saveToClientInput.Text;
+            var data = new Data();
+            var args = new string[2];
+            args[0] = path;
+            args[1] = pathTo;
+            data.Command = CommandType.DownloadFile;
+            data.Arguments = args;
+            InitializeSocket();
+            Client.Send(socket, data);
+            var bytes = socket.AcceptBytes();
+            File.WriteAllBytes(pathTo, bytes);
         }
 
         private void testButton_Click(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void InitializeSocket()
+        {
+            int.TryParse(portInputField.Text, out var port);
+            socket = Client.Connect(ipInputField.Text, port);
+        }
+
+        private void button1_Click(object sender, EventArgs e) //Кнопка загрузки с клиента на сервер
+        {
+            var clientPath = downloadFromClient.Text;
+            var serverPath = saveToServerInput.Text;
+
+            var bytes = File.ReadAllBytes(clientPath);
+
+            var data = new Data();
             
 
         }

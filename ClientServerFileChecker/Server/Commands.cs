@@ -9,7 +9,9 @@ namespace Client
     public enum CommandType
     {
         SayHello,
-        GetDirectory
+        GetDirectory,
+        DownloadFile,
+        DownloadFileToServer
 
     }
 }

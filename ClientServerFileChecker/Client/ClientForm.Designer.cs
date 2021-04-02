@@ -46,6 +46,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.testButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.saveToServerInput = new System.Windows.Forms.TextBox();
+            this.downloadFromClient = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,16 +65,18 @@
             this.panel1.Controls.Add(this.ipInputField);
             this.panel1.Controls.Add(this.portLabel);
             this.panel1.Controls.Add(this.ipLabel);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
+            this.panel1.Location = new System.Drawing.Point(17, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 28);
+            this.panel1.Size = new System.Drawing.Size(469, 34);
             this.panel1.TabIndex = 0;
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(267, 4);
+            this.connectButton.Location = new System.Drawing.Point(356, 5);
+            this.connectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(75, 20);
+            this.connectButton.Size = new System.Drawing.Size(100, 25);
             this.connectButton.TabIndex = 4;
             this.connectButton.Text = "Connect";
             this.connectButton.UseVisualStyleBackColor = true;
@@ -75,33 +84,37 @@
             // 
             // portInputField
             // 
-            this.portInputField.Location = new System.Drawing.Point(196, 4);
+            this.portInputField.Location = new System.Drawing.Point(261, 5);
+            this.portInputField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.portInputField.Name = "portInputField";
-            this.portInputField.Size = new System.Drawing.Size(54, 20);
+            this.portInputField.Size = new System.Drawing.Size(71, 22);
             this.portInputField.TabIndex = 3;
             // 
             // ipInputField
             // 
-            this.ipInputField.Location = new System.Drawing.Point(26, 4);
+            this.ipInputField.Location = new System.Drawing.Point(35, 5);
+            this.ipInputField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ipInputField.Name = "ipInputField";
-            this.ipInputField.Size = new System.Drawing.Size(133, 20);
+            this.ipInputField.Size = new System.Drawing.Size(176, 22);
             this.ipInputField.TabIndex = 2;
             // 
             // portLabel
             // 
             this.portLabel.AutoSize = true;
-            this.portLabel.Location = new System.Drawing.Point(165, 7);
+            this.portLabel.Location = new System.Drawing.Point(220, 9);
+            this.portLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.portLabel.Name = "portLabel";
-            this.portLabel.Size = new System.Drawing.Size(25, 13);
+            this.portLabel.Size = new System.Drawing.Size(33, 17);
             this.portLabel.TabIndex = 1;
             this.portLabel.Text = "port";
             // 
             // ipLabel
             // 
             this.ipLabel.AutoSize = true;
-            this.ipLabel.Location = new System.Drawing.Point(5, 7);
+            this.ipLabel.Location = new System.Drawing.Point(7, 9);
+            this.ipLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ipLabel.Name = "ipLabel";
-            this.ipLabel.Size = new System.Drawing.Size(15, 13);
+            this.ipLabel.Size = new System.Drawing.Size(19, 17);
             this.ipLabel.TabIndex = 0;
             this.ipLabel.Text = "ip";
             // 
@@ -111,28 +124,28 @@
             this.panel2.Controls.Add(this.findButton);
             this.panel2.Controls.Add(this.pathInputField);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(13, 46);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(17, 57);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(352, 394);
+            this.panel2.Size = new System.Drawing.Size(469, 485);
             this.panel2.TabIndex = 1;
             // 
             // directoryOutputField
             // 
-            this.directoryOutputField.Location = new System.Drawing.Point(10, 28);
-            this.directoryOutputField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.directoryOutputField.Location = new System.Drawing.Point(13, 34);
+            this.directoryOutputField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.directoryOutputField.Multiline = true;
             this.directoryOutputField.Name = "directoryOutputField";
             this.directoryOutputField.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.directoryOutputField.Size = new System.Drawing.Size(333, 356);
+            this.directoryOutputField.Size = new System.Drawing.Size(443, 437);
             this.directoryOutputField.TabIndex = 3;
             // 
             // findButton
             // 
-            this.findButton.Location = new System.Drawing.Point(267, 3);
-            this.findButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.findButton.Location = new System.Drawing.Point(356, 5);
+            this.findButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(75, 19);
+            this.findButton.Size = new System.Drawing.Size(100, 23);
             this.findButton.TabIndex = 2;
             this.findButton.Text = "Find";
             this.findButton.UseVisualStyleBackColor = true;
@@ -140,41 +153,47 @@
             // 
             // pathInputField
             // 
-            this.pathInputField.Location = new System.Drawing.Point(40, 3);
-            this.pathInputField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pathInputField.Location = new System.Drawing.Point(53, 6);
+            this.pathInputField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pathInputField.Name = "pathInputField";
-            this.pathInputField.Size = new System.Drawing.Size(210, 20);
+            this.pathInputField.Size = new System.Drawing.Size(279, 22);
             this.pathInputField.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(36, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "path";
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.saveToServerInput);
+            this.panel3.Controls.Add(this.downloadFromClient);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.downloadButton);
             this.panel3.Controls.Add(this.saveToClientInput);
             this.panel3.Controls.Add(this.downloadInputField);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(370, 13);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(493, 16);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(421, 207);
+            this.panel3.Size = new System.Drawing.Size(561, 255);
             this.panel3.TabIndex = 2;
             // 
             // downloadButton
             // 
-            this.downloadButton.Location = new System.Drawing.Point(321, 59);
-            this.downloadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.downloadButton.Location = new System.Drawing.Point(434, 100);
+            this.downloadButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downloadButton.Name = "downloadButton";
-            this.downloadButton.Size = new System.Drawing.Size(76, 21);
+            this.downloadButton.Size = new System.Drawing.Size(101, 26);
             this.downloadButton.TabIndex = 4;
             this.downloadButton.Text = "Download";
             this.downloadButton.UseVisualStyleBackColor = true;
@@ -182,60 +201,122 @@
             // 
             // saveToClientInput
             // 
-            this.saveToClientInput.Location = new System.Drawing.Point(80, 37);
-            this.saveToClientInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveToClientInput.Location = new System.Drawing.Point(113, 73);
+            this.saveToClientInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveToClientInput.Name = "saveToClientInput";
-            this.saveToClientInput.Size = new System.Drawing.Size(319, 20);
+            this.saveToClientInput.Size = new System.Drawing.Size(424, 22);
             this.saveToClientInput.TabIndex = 3;
             // 
             // downloadInputField
             // 
-            this.downloadInputField.Location = new System.Drawing.Point(80, 11);
-            this.downloadInputField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.downloadInputField.Location = new System.Drawing.Point(113, 41);
+            this.downloadInputField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downloadInputField.Name = "downloadInputField";
-            this.downloadInputField.Size = new System.Drawing.Size(319, 20);
+            this.downloadInputField.Size = new System.Drawing.Size(424, 22);
             this.downloadInputField.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 39);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(70, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 13);
+            this.label3.Size = new System.Drawing.Size(20, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "to";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(19, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Download";
             // 
             // testButton
             // 
-            this.testButton.Location = new System.Drawing.Point(547, 315);
-            this.testButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.testButton.Location = new System.Drawing.Point(729, 388);
+            this.testButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(56, 19);
+            this.testButton.Size = new System.Drawing.Size(75, 23);
             this.testButton.TabIndex = 3;
             this.testButton.Text = "test";
             this.testButton.UseVisualStyleBackColor = true;
             this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(434, 214);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 26);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Download";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // saveToServerInput
+            // 
+            this.saveToServerInput.Location = new System.Drawing.Point(113, 187);
+            this.saveToServerInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveToServerInput.Name = "saveToServerInput";
+            this.saveToServerInput.Size = new System.Drawing.Size(424, 22);
+            this.saveToServerInput.TabIndex = 8;
+            // 
+            // downloadFromClient
+            // 
+            this.downloadFromClient.Location = new System.Drawing.Point(113, 155);
+            this.downloadFromClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.downloadFromClient.Name = "downloadFromClient";
+            this.downloadFromClient.Size = new System.Drawing.Size(424, 22);
+            this.downloadFromClient.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(70, 189);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "to";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Download";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 16);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 17);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Server to client";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(22, 127);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 17);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Client to server";
+            // 
             // ClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.testButton);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ClientForm";
             this.Text = "Client";
             this.Load += new System.EventHandler(this.ClientForm_Load);
@@ -269,6 +350,13 @@
         private System.Windows.Forms.TextBox saveToClientInput;
         private System.Windows.Forms.Button downloadButton;
         private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox saveToServerInput;
+        private System.Windows.Forms.TextBox downloadFromClient;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

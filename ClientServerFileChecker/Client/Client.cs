@@ -39,17 +39,23 @@ namespace Client
         public static byte[] AcceptBytes(this Socket tcpSocket)
         {
             var bytes = new byte[10000];
+            var size = tcpSocket.Receive(bytes);
+            var bytesFinal = new byte[size];
+            for(var i = 0; i < size; i++)
+            {
+                bytesFinal[i] = bytes[i];
+            }
 
             try
             {
-                tcpSocket.Receive(bytes);
+                //tcpSocket.Receive(bytes);
             }
             catch(Exception e)
             {
                 ConsoleOut.WriteLine(e.Message);
             }
 
-            return bytes;
+            return bytesFinal;
         }
 
         public static void CloseConnection(Socket socket)
