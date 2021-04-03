@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Client
 {
-    public static class HashSumComputer
+    public static class MD5HashComputer
     {
         public static string ComputeMD5Checksum(string path)
         {

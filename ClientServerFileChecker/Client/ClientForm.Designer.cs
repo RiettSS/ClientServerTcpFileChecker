@@ -40,22 +40,29 @@
             this.pathInputField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.downloadButton = new System.Windows.Forms.Button();
-            this.saveToClientInput = new System.Windows.Forms.TextBox();
-            this.downloadInputField = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.testButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.saveToServerInput = new System.Windows.Forms.TextBox();
             this.downloadFromClient = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.downloadButton = new System.Windows.Forms.Button();
+            this.saveToClientInput = new System.Windows.Forms.TextBox();
+            this.downloadInputField = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.md5Server = new System.Windows.Forms.TextBox();
+            this.md5Client = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,18 +72,16 @@
             this.panel1.Controls.Add(this.ipInputField);
             this.panel1.Controls.Add(this.portLabel);
             this.panel1.Controls.Add(this.ipLabel);
-            this.panel1.Location = new System.Drawing.Point(17, 16);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 34);
+            this.panel1.Size = new System.Drawing.Size(352, 28);
             this.panel1.TabIndex = 0;
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(356, 5);
-            this.connectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.connectButton.Location = new System.Drawing.Point(267, 4);
             this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(100, 25);
+            this.connectButton.Size = new System.Drawing.Size(75, 20);
             this.connectButton.TabIndex = 4;
             this.connectButton.Text = "Connect";
             this.connectButton.UseVisualStyleBackColor = true;
@@ -84,37 +89,33 @@
             // 
             // portInputField
             // 
-            this.portInputField.Location = new System.Drawing.Point(261, 5);
-            this.portInputField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.portInputField.Location = new System.Drawing.Point(196, 4);
             this.portInputField.Name = "portInputField";
-            this.portInputField.Size = new System.Drawing.Size(71, 22);
+            this.portInputField.Size = new System.Drawing.Size(54, 20);
             this.portInputField.TabIndex = 3;
             // 
             // ipInputField
             // 
-            this.ipInputField.Location = new System.Drawing.Point(35, 5);
-            this.ipInputField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ipInputField.Location = new System.Drawing.Point(26, 4);
             this.ipInputField.Name = "ipInputField";
-            this.ipInputField.Size = new System.Drawing.Size(176, 22);
+            this.ipInputField.Size = new System.Drawing.Size(133, 20);
             this.ipInputField.TabIndex = 2;
             // 
             // portLabel
             // 
             this.portLabel.AutoSize = true;
-            this.portLabel.Location = new System.Drawing.Point(220, 9);
-            this.portLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.portLabel.Location = new System.Drawing.Point(165, 7);
             this.portLabel.Name = "portLabel";
-            this.portLabel.Size = new System.Drawing.Size(33, 17);
+            this.portLabel.Size = new System.Drawing.Size(25, 13);
             this.portLabel.TabIndex = 1;
             this.portLabel.Text = "port";
             // 
             // ipLabel
             // 
             this.ipLabel.AutoSize = true;
-            this.ipLabel.Location = new System.Drawing.Point(7, 9);
-            this.ipLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ipLabel.Location = new System.Drawing.Point(5, 7);
             this.ipLabel.Name = "ipLabel";
-            this.ipLabel.Size = new System.Drawing.Size(19, 17);
+            this.ipLabel.Size = new System.Drawing.Size(15, 13);
             this.ipLabel.TabIndex = 0;
             this.ipLabel.Text = "ip";
             // 
@@ -124,28 +125,28 @@
             this.panel2.Controls.Add(this.findButton);
             this.panel2.Controls.Add(this.pathInputField);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(17, 57);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(13, 49);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(469, 485);
+            this.panel2.Size = new System.Drawing.Size(352, 394);
             this.panel2.TabIndex = 1;
             // 
             // directoryOutputField
             // 
-            this.directoryOutputField.Location = new System.Drawing.Point(13, 34);
-            this.directoryOutputField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.directoryOutputField.Location = new System.Drawing.Point(10, 28);
+            this.directoryOutputField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.directoryOutputField.Multiline = true;
             this.directoryOutputField.Name = "directoryOutputField";
             this.directoryOutputField.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.directoryOutputField.Size = new System.Drawing.Size(443, 437);
+            this.directoryOutputField.Size = new System.Drawing.Size(333, 356);
             this.directoryOutputField.TabIndex = 3;
             // 
             // findButton
             // 
-            this.findButton.Location = new System.Drawing.Point(356, 5);
-            this.findButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.findButton.Location = new System.Drawing.Point(267, 4);
+            this.findButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.findButton.Name = "findButton";
-            this.findButton.Size = new System.Drawing.Size(100, 23);
+            this.findButton.Size = new System.Drawing.Size(75, 19);
             this.findButton.TabIndex = 2;
             this.findButton.Text = "Find";
             this.findButton.UseVisualStyleBackColor = true;
@@ -153,18 +154,19 @@
             // 
             // pathInputField
             // 
-            this.pathInputField.Location = new System.Drawing.Point(53, 6);
-            this.pathInputField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pathInputField.Location = new System.Drawing.Point(40, 5);
+            this.pathInputField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pathInputField.Name = "pathInputField";
-            this.pathInputField.Size = new System.Drawing.Size(279, 22);
+            this.pathInputField.Size = new System.Drawing.Size(210, 20);
             this.pathInputField.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Location = new System.Drawing.Point(8, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 17);
+            this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "path";
             // 
@@ -182,74 +184,38 @@
             this.panel3.Controls.Add(this.downloadInputField);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(493, 16);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(370, 13);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(561, 255);
+            this.panel3.Size = new System.Drawing.Size(421, 207);
             this.panel3.TabIndex = 2;
             // 
-            // downloadButton
+            // label7
             // 
-            this.downloadButton.Location = new System.Drawing.Point(434, 100);
-            this.downloadButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.downloadButton.Name = "downloadButton";
-            this.downloadButton.Size = new System.Drawing.Size(101, 26);
-            this.downloadButton.TabIndex = 4;
-            this.downloadButton.Text = "Download";
-            this.downloadButton.UseVisualStyleBackColor = true;
-            this.downloadButton.Click += new System.EventHandler(this.downloadButton_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 103);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Client to server";
             // 
-            // saveToClientInput
+            // label6
             // 
-            this.saveToClientInput.Location = new System.Drawing.Point(113, 73);
-            this.saveToClientInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.saveToClientInput.Name = "saveToClientInput";
-            this.saveToClientInput.Size = new System.Drawing.Size(424, 22);
-            this.saveToClientInput.TabIndex = 3;
-            // 
-            // downloadInputField
-            // 
-            this.downloadInputField.Location = new System.Drawing.Point(113, 41);
-            this.downloadInputField.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.downloadInputField.Name = "downloadInputField";
-            this.downloadInputField.Size = new System.Drawing.Size(424, 22);
-            this.downloadInputField.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "to";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Download";
-            // 
-            // testButton
-            // 
-            this.testButton.Location = new System.Drawing.Point(729, 388);
-            this.testButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.testButton.Name = "testButton";
-            this.testButton.Size = new System.Drawing.Size(75, 23);
-            this.testButton.TabIndex = 3;
-            this.testButton.Text = "test";
-            this.testButton.UseVisualStyleBackColor = true;
-            this.testButton.Click += new System.EventHandler(this.testButton_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 13);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(78, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Server to client";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(434, 214);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(326, 174);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 26);
+            this.button1.Size = new System.Drawing.Size(76, 21);
             this.button1.TabIndex = 9;
             this.button1.Text = "Download";
             this.button1.UseVisualStyleBackColor = true;
@@ -257,66 +223,162 @@
             // 
             // saveToServerInput
             // 
-            this.saveToServerInput.Location = new System.Drawing.Point(113, 187);
-            this.saveToServerInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveToServerInput.Location = new System.Drawing.Point(85, 152);
+            this.saveToServerInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveToServerInput.Name = "saveToServerInput";
-            this.saveToServerInput.Size = new System.Drawing.Size(424, 22);
+            this.saveToServerInput.Size = new System.Drawing.Size(319, 20);
             this.saveToServerInput.TabIndex = 8;
             // 
             // downloadFromClient
             // 
-            this.downloadFromClient.Location = new System.Drawing.Point(113, 155);
-            this.downloadFromClient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.downloadFromClient.Location = new System.Drawing.Point(85, 126);
+            this.downloadFromClient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.downloadFromClient.Name = "downloadFromClient";
-            this.downloadFromClient.Size = new System.Drawing.Size(424, 22);
+            this.downloadFromClient.Size = new System.Drawing.Size(319, 20);
             this.downloadFromClient.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 189);
+            this.label4.Location = new System.Drawing.Point(52, 154);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 17);
+            this.label4.Size = new System.Drawing.Size(16, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "to";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 158);
+            this.label5.Location = new System.Drawing.Point(14, 128);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 17);
+            this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Download";
             // 
-            // label6
+            // downloadButton
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Server to client";
+            this.downloadButton.Location = new System.Drawing.Point(326, 81);
+            this.downloadButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.downloadButton.Name = "downloadButton";
+            this.downloadButton.Size = new System.Drawing.Size(76, 21);
+            this.downloadButton.TabIndex = 4;
+            this.downloadButton.Text = "Download";
+            this.downloadButton.UseVisualStyleBackColor = true;
+            this.downloadButton.Click += new System.EventHandler(this.downloadButton_Click);
             // 
-            // label7
+            // saveToClientInput
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(22, 127);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 17);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Client to server";
+            this.saveToClientInput.Location = new System.Drawing.Point(85, 59);
+            this.saveToClientInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveToClientInput.Name = "saveToClientInput";
+            this.saveToClientInput.Size = new System.Drawing.Size(319, 20);
+            this.saveToClientInput.TabIndex = 3;
+            // 
+            // downloadInputField
+            // 
+            this.downloadInputField.Location = new System.Drawing.Point(85, 33);
+            this.downloadInputField.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.downloadInputField.Name = "downloadInputField";
+            this.downloadInputField.Size = new System.Drawing.Size(319, 20);
+            this.downloadInputField.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(52, 61);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(16, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "to";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Download";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.checkButton);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.md5Server);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.md5Client);
+            this.panel4.Location = new System.Drawing.Point(371, 226);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(420, 217);
+            this.panel4.TabIndex = 3;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(161, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "MD5 Hash Checker";
+            // 
+            // md5Server
+            // 
+            this.md5Server.Location = new System.Drawing.Point(84, 71);
+            this.md5Server.Margin = new System.Windows.Forms.Padding(2);
+            this.md5Server.Name = "md5Server";
+            this.md5Server.Size = new System.Drawing.Size(319, 20);
+            this.md5Server.TabIndex = 13;
+            // 
+            // md5Client
+            // 
+            this.md5Client.Location = new System.Drawing.Point(84, 37);
+            this.md5Client.Margin = new System.Windows.Forms.Padding(2);
+            this.md5Client.Name = "md5Client";
+            this.md5Client.Size = new System.Drawing.Size(319, 20);
+            this.md5Client.TabIndex = 12;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(30, 40);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 13);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Client";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(29, 74);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 13);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Server";
+            // 
+            // checkButton
+            // 
+            this.checkButton.Location = new System.Drawing.Point(328, 96);
+            this.checkButton.Name = "checkButton";
+            this.checkButton.Size = new System.Drawing.Size(75, 23);
+            this.checkButton.TabIndex = 16;
+            this.checkButton.Text = "Check";
+            this.checkButton.UseVisualStyleBackColor = true;
+            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
             // 
             // ClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.testButton);
+            this.ClientSize = new System.Drawing.Size(803, 454);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ClientForm";
             this.Text = "Client";
             this.Load += new System.EventHandler(this.ClientForm_Load);
@@ -326,6 +388,8 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -349,7 +413,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox saveToClientInput;
         private System.Windows.Forms.Button downloadButton;
-        private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
@@ -357,6 +420,13 @@
         private System.Windows.Forms.TextBox downloadFromClient;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button checkButton;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox md5Server;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox md5Client;
     }
 }
 

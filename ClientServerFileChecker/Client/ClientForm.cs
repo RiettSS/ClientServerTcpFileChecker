@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -80,9 +81,28 @@ namespace Client
             File.WriteAllBytes(pathTo, bytes);
         }
 
+        private void button1_Click(object sender, EventArgs e) //Кнопка загрузки с клиента на сервер
+        {
+            var clientPath = downloadFromClient.Text;
+            var serverPath = saveToServerInput.Text;
+
+            var bytes = File.ReadAllBytes(clientPath);
+
+            var data = new Data();
+            data.Command = CommandType.DownloadFileToServer;
+            var args = new string[1];
+            args[0] = serverPath;
+            data.Arguments = args;
+
+            InitializeSocket();
+            Client.Send(socket, data);
+            //Thread.Sleep(2000);
+            socket.Send(bytes);
+        }
+
         private void testButton_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -92,16 +112,33 @@ namespace Client
             socket = Client.Connect(ipInputField.Text, port);
         }
 
-        private void button1_Click(object sender, EventArgs e) //Кнопка загрузки с клиента на сервер
+        private void checkButton_Click(object sender, EventArgs e)
         {
-            var clientPath = downloadFromClient.Text;
-            var serverPath = saveToServerInput.Text;
-
-            var bytes = File.ReadAllBytes(clientPath);
+            var clientPath = md5Client.Text;
+            var serverPath = md5Server.Text;
 
             var data = new Data();
-            
+            data.Command = CommandType.CheckHash;
+            data.Arguments = new string[1] { serverPath };
 
+            InitializeSocket();
+
+            socket.Send(data);
+            var bytes = socket.ReceiveBytes();
+
+            var clientHash = MD5HashComputer.ComputeMD5Checksum(clientPath);
+
+            var serverHash = Encoding.UTF8.GetString(bytes);
+
+            if(clientHash == serverHash)
+            {
+                ConsoleOut.WriteLine("Files are equal");
+            } 
+            else
+            {
+                ConsoleOut.WriteLine("Files aren't equal");
+            }
+            
         }
     }
 }

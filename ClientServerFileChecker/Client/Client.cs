@@ -36,6 +36,20 @@ namespace Client
             }
         }
 
+        public static byte[] ReceiveBytes(this Socket listener)
+        {
+            var bytes = new byte[10000];
+            var size = listener.Receive(bytes);
+            var bytesFinal = new byte[size];
+            for (var i = 0; i < size; i++)
+            {
+                bytesFinal[i] = bytes[i];
+            }
+
+            return bytesFinal;
+        }
+
+
         public static byte[] AcceptBytes(this Socket tcpSocket)
         {
             var bytes = new byte[10000];
@@ -44,15 +58,6 @@ namespace Client
             for(var i = 0; i < size; i++)
             {
                 bytesFinal[i] = bytes[i];
-            }
-
-            try
-            {
-                //tcpSocket.Receive(bytes);
-            }
-            catch(Exception e)
-            {
-                ConsoleOut.WriteLine(e.Message);
             }
 
             return bytesFinal;

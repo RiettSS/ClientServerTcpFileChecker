@@ -12,6 +12,6 @@ namespace Client
         GetDirectory,
         DownloadFile,
         DownloadFileToServer,
-
+        CheckHash
     }
 }

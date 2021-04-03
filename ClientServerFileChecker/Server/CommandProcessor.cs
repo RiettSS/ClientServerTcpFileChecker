@@ -11,7 +11,7 @@ namespace Server
 {
     public static class CommandProcessor
     {
-        public static void Process(Socket listener ,Data data)
+        public static void Process(Socket listener, Data data)
         {
             ConsoleOut.WriteLine("Command is processing...");
 
@@ -47,7 +47,7 @@ namespace Server
                         }
 
                         var response = builder.ToString();
-                        ConsoleOut.WriteLine(response);
+                        //ConsoleOut.WriteLine(response);
 
                         var arr = Encoding.UTF8.GetBytes(response);
                         //var arr = Encoding.UTF8.GetBytes("Connected");
@@ -62,7 +62,30 @@ namespace Server
                         var bytes = File.ReadAllBytes(path);
 
                         listener.Send(bytes);
+                    }
+                    break;
+                case CommandType.DownloadFileToServer:
+                    {
+                        ConsoleOut.WriteLine("Downloading file to " + data.Arguments[0]);
+                        var path = data.Arguments[0];
+                        var bytes = new byte[10000];
+                        var size = listener.Receive(bytes);
+                        var bytesFinal = new byte[size];
+                        for (var i = 0; i < size; i++)
+                        {
+                            bytesFinal[i] = bytes[i];
+                        }
 
+                        File.WriteAllBytes(path, bytesFinal);
+                    }
+                    break;
+                case CommandType.CheckHash:
+                    {
+                        var path = data.Arguments[0];
+                        var hash = MD5HashComputer.ComputeMD5Checksum(path);
+
+                        var bytes = Encoding.UTF8.GetBytes(hash);
+                        listener.Send(bytes);
                     }
                     break;
             }

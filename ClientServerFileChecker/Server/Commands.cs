@@ -11,7 +11,7 @@ namespace Client
         SayHello,
         GetDirectory,
         DownloadFile,
-        DownloadFileToServer
-
+        DownloadFileToServer,
+        CheckHash
     }
 }
