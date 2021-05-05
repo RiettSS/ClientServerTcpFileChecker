@@ -17,3 +17,4 @@ C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileCheck
 C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.exe
 C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.pdb
+C:\Users\Riett\Documents\GitHub\ClientServerTcpFileChecker\ClientServerFileChecker\Server\obj\Debug\Server.csprojAssemblyReference.cache

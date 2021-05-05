@@ -48,21 +48,11 @@
   <ItemGroup>
     <Compile Include="CommandProcessor.cs" />
     <Compile Include="Commands.cs" />
-    <Compile Include="Commands\DirectoryGetter.cs" />
-    <Compile Include="Commands\Downloader.cs" />
-    <Compile Include="Commands\FileDownloader.cs" />
-    <Compile Include="Commands\MessagePrinter.cs" />
     <Compile Include="ConsoleOut.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="CustomBinder.cs" />
     <Compile Include="Data.cs" />
-    <Compile Include="ICommand.cs" />
-    <Compile Include="IResponse.cs" />
     <Compile Include="MD5HashComputer.cs" />
-    <Compile Include="Responses\DirectoryGetterResponse.cs" />
-    <Compile Include="Responses\DownloaderResponse.cs" />
-    <Compile Include="Responses\FileDownloaderResponse.cs" />
-    <Compile Include="Responses\MessagePrinterResponse.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="ServerForm.cs">
       <SubType>Form</SubType>

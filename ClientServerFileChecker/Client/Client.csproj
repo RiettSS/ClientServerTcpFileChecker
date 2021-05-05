@@ -54,23 +54,13 @@
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Commands.cs" />
-    <Compile Include="Commands\DirectoryGetter.cs" />
-    <Compile Include="Commands\Downloader.cs" />
-    <Compile Include="Commands\FileDownloader.cs" />
-    <Compile Include="Commands\MessagePrinter.cs" />
     <Compile Include="ConsoleOut.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="CustomBinder.cs" />
     <Compile Include="Data.cs" />
-    <Compile Include="ICommand.cs" />
-    <Compile Include="IResponse.cs" />
     <Compile Include="MD5HashComputer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Responses\DirectoryGetterResponse.cs" />
-    <Compile Include="Responses\DownloaderResponse.cs" />
-    <Compile Include="Responses\FileDownloaderResponse.cs" />
-    <Compile Include="Responses\MessagePrinterResponse.cs" />
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
